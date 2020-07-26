@@ -58,11 +58,11 @@ def PlayTrivia(Qs, As):
 	window.mainloop()
 
 
-# Qs = '/Users/matt/Desktop/Trivia/data/questions_short.txt'
-# As = '/Users/matt/Desktop/Trivia/data/answers_short.txt'
+# Qs = '../data/questions_short.txt'
+# As = '../data/answers_short.txt'
 
-Qs = '/Users/matt/Desktop/Trivia/data/questions.txt'
-As = '/Users/matt/Desktop/Trivia/data/answers_spaced.txt'
+Qs = '../data/questions.txt'
+As = '../data/answers_spaced.txt'
 
 questions, answers = ReadQandA(Qs, As)
 questions, answers, order = ShuffleQandA(questions, answers)
