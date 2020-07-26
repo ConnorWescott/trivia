@@ -22,8 +22,8 @@ def ShuffleQandA(questions, answers):
 
 
 def PrettyPrint(order):
-	order = order + 1
-	number = list(range(1, len(order + 1)))
+	order += 1
+	number = list(range(1, len(order) + 1))
 	for o, n in zip(order, number):
 		print(str(n) + ':\t' + str(o))
 	return
@@ -31,38 +31,65 @@ def PrettyPrint(order):
 
 def PlayTrivia(Qs, As):
 
-	def FlipCard():
+	def FlipCard(event=None):
 		current = cardInfo["text"]
-		if current == Qs[0]:
-			cardInfo.config(text=As[0])
+		if current == Qs[counter]:
+			cardInfo.config(text=As[counter])
 			flipButton.config(text='Show Question')
-		elif current == As[0]:
-			cardInfo.config(text=Qs[0])
+		elif current == As[counter]:
+			cardInfo.config(text=Qs[counter])
 			flipButton.config(text='Show Answer')
 
-	def NextCard():
-		window.destroy()
-		PlayTrivia(Qs[1:], As[1:])
+	def NextCard(event=None):
+		global counter
+		counter += 1
+		try:
+			cardInfo.config(text=Qs[counter])
+			flipButton.config(text='Show Answer')
+		except IndexError:
+			cardInfo.config(text='No more cards. Thank you for playing :)')
+			flipButton.pack_forget()
+			nextButton.pack_forget()
+			end_btn = tk.Button(master=buttonFrame, text='Click here to exit ', font=("Helvetica Neue", 20), highlightbackground='#1b2b34', fg='#1b2b34', command=window.destroy)
+			end_btn.pack()
 
 	window = tk.Tk()
-	window.minsize(1250, 700)
+	window.geometry('1200x700')
+	window.configure(bg='#1b2b34')
 
-	cardInfo = tk.Label(text=Qs[0], font=("Helvetica", 80), wraplength=1100, justify='left', fg='#1b2b34')
+	buttonFrame = tk.Frame(bg='#1b2b34')
+	textFrame = tk.Frame(bg='#1b2b34')
+
+	# Setup button to flip card
+	flipButton = tk.Button(master=buttonFrame, text="Show Answer", font=("Helvetica Neue", 20), highlightbackground='#1b2b34', fg='#1b2b34', command=FlipCard)
+	flipButton.pack(side=tk.LEFT)
+
+	# Setup button to move to next card
+	nextButton = tk.Button(master=buttonFrame, text="Go to next question", font=("Helvetica Neue", 20), highlightbackground='#1b2b34', fg='#1b2b34', command=NextCard)
+	nextButton.pack(side=tk.LEFT)
+
+	# Setup card info
+	cardInfo = tk.Label(master=textFrame, text=Qs[counter], font=("Helvetica Neue", 80), wraplength=1100, justify='left', fg='#cdd3de', bg='#1b2b34')
 	cardInfo.pack()
 
-	flipButton = tk.Button(text="Show Answer", command=FlipCard)
-	flipButton.pack()
+	buttonFrame.pack(side=tk.TOP)
+	textFrame.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
 
-	nextButton = tk.Button(text="Go to next question", command=NextCard)
-	nextButton.pack()
+	# Bind keyboard to arrow keys
+	window.bind('<Left>', FlipCard)
+	window.bind('<Right>', NextCard)
+
 	window.mainloop()
 
 
-# Qs = '../data/questions_short.txt'
-# As = '../data/answers_short.txt'
+Qs = '../data/questions_short.txt'
+As = '../data/answers_short.txt'
 
-Qs = '../data/questions.txt'
-As = '../data/answers_spaced.txt'
+global counter
+counter = 0
+
+# Qs = '../data/questions.txt'
+# As = '../data/answers_spaced.txt'
 
 questions, answers = ReadQandA(Qs, As)
 questions, answers, order = ShuffleQandA(questions, answers)
@@ -70,3 +97,4 @@ PrettyPrint(order)
 
 
 PlayTrivia(questions, answers)
+# '#1b2b34'
