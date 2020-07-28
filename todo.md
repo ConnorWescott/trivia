@@ -4,7 +4,7 @@
 	- 
 
 ## Functional
-	
+	- Have current slide's timer stop when next card is queued before current card's timer is up
 
 # DONE
 	- Change backgrond color (dark mode)
