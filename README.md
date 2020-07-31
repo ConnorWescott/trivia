@@ -8,7 +8,7 @@ Thanks to Caleb Penner for finding and adding questions/answers.
 	- 
 
 ### Functional
-	- Have current slide's timer stop when next card is queued before current card's timer is up
+	- 
 
 ## DONE
 	- Change backgrond color (dark mode)
@@ -16,3 +16,4 @@ Thanks to Caleb Penner for finding and adding questions/answers.
 	- Allow keyboard keys to flip card and move to next card
 	- Make buttons (and button text larger)
 	- Countdown timer
+	- Have current slide's timer stop when next card is queued before current card's timer is up
