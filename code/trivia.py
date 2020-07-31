@@ -21,7 +21,6 @@ def ShuffleQandA(questions, answers):
 
 	questions = np.insert(questions, 0, 'Are You Ready?')
 	answers = np.insert(answers, 0, 'Press "Go to next question" to start.')
-	# inds = np.insert(inds, 0, -1)
 	return ((questions, answers, inds))
 
 
@@ -33,37 +32,41 @@ def PrettyPrint(order):
 	return
 
 
+
 def PlayTrivia(Qs, As):
 
 	def FlipCard(event=None):
 		current = cardInfo["text"]
 		if current == Qs[counter]:
 			cardInfo.config(text=As[counter])
-			flipButton.config(text='Show Question')
+			flipButton.config(text='Show Question (⬅)')
 		elif current == As[counter]:
 			cardInfo.config(text=Qs[counter])
-			flipButton.config(text='Show Answer')
+			flipButton.config(text='Show Answer (⬅)')
 
 	def NextCard(event=None):
-		global counter
+		global counter, timer
 		counter += 1
 		try:
-			timer.pack_forget()
-			cardInfo.config(text=Qs[counter])
-			flipButton.config(text='Show Answer')
-			timer.pack()
-			countdown(30)
+			cardInfo.config(text=Qs[counter], fg=lightGray)
+			flipButton.config(text='Show Answer (⬅)')
+			timer.destroy()
+			timer = tk.Label(master=buttonFrame, text='30', font=("Helvetica Neue Bold", 50), fg=lightGray, bg=darkBlue)
+			timer.pack(side=tk.LEFT)
+			countdown(30, timer)
 		except IndexError:
+			timer.destroy()
+
 			cardInfo.config(text='No more cards. Thank you for playing! 🤠')
 			flipButton.pack_forget()
 			nextButton.pack_forget()
 			timer.pack_forget()
-			end_btn = tk.Button(master=buttonFrame, text='Click here to exit ', font=("Helvetica Neue Bold", 35), highlightbackground='#1b2b34', fg='#1b2b34', command=window.destroy)
+			end_btn = tk.Button(master=buttonFrame, text='Click here to exit ', font=("Helvetica Neue Bold", 35), highlightbackground=darkBlue, fg=darkBlue, command=window.destroy)
 			end_btn.pack()
 
-	def countdown(seconds):
-		timer.config(text=str(seconds))
 
+	def countdown(seconds, timer):
+		timer.config(text=str(seconds))
 		if seconds < 1:
 			timer.config(fg=lightGray)
 			cardInfo.config(fg=lightGray)
@@ -71,34 +74,36 @@ def PlayTrivia(Qs, As):
 		elif seconds <= 5:
 			timer.config(fg='red')
 			cardInfo.config(fg='red')
-			window.after(1000, countdown, seconds - 1)
+			window.after(1000, countdown, seconds - 1, timer)
 		elif seconds <= 15:
 			timer.config(text=str(seconds), fg=orange)
 			cardInfo.config(fg=orange)
-			window.after(1000, countdown, seconds - 1)
+			window.after(1000, countdown, seconds - 1, timer)
 		elif seconds > 0:
-			window.after(1000, countdown, seconds - 1)
+			window.after(1000, countdown, seconds - 1, timer)
 
 	window = tk.Tk()
 	window.geometry('1200x700')
-	window.configure(bg='#1b2b34')
+	window.configure(bg=darkBlue)
 
-	buttonFrame = tk.Frame(bg='#1b2b34')
-	textFrame = tk.Frame(bg='#1b2b34')
+	buttonFrame = tk.Frame(bg=darkBlue)
+	textFrame = tk.Frame(bg=darkBlue)
 
 	# Setup button to flip card
-	flipButton = tk.Button(master=buttonFrame, text="Show Answer", font=("Helvetica Neue Bold", 20), highlightbackground='#1b2b34', fg='#1b2b34', command=FlipCard)
+	flipButton = tk.Button(master=buttonFrame, text="Show Answer (⬅)", font=("Helvetica Neue Bold", 20), highlightbackground=darkBlue, fg=darkBlue, command=FlipCard)
 	flipButton.pack(side=tk.LEFT)
 
 	# Setup button to move to next card
-	nextButton = tk.Button(master=buttonFrame, text="Go to next question", font=("Helvetica Neue Bold", 20), highlightbackground='#1b2b34', fg='#1b2b34', command=NextCard)
+	nextButton = tk.Button(master=buttonFrame, text="(⮕)Go to next question", font=("Helvetica Neue Bold", 20), highlightbackground=darkBlue, fg=darkBlue, command=NextCard)
 	nextButton.pack(side=tk.LEFT)
 
-	timer = tk.Label(master=buttonFrame, text='30', font=("Helvetica Neue Bold", 50), fg='#cdd3de', bg='#1b2b34')
+	# Setup the timer label
+	global timer
+	timer = tk.Label(master=buttonFrame, text='30', font=("Helvetica Neue Bold", 50), fg=lightGray, bg=darkBlue)
 	timer.pack(side=tk.LEFT)
 
 	# Setup card info
-	cardInfo = tk.Label(master=textFrame, text=Qs[counter], font=("Helvetica Neue", 80), wraplength=1100, justify='left', fg='#cdd3de', bg='#1b2b34')
+	cardInfo = tk.Label(master=textFrame, text=Qs[counter], font=("Helvetica Neue", 80), wraplength=1100, justify='left', fg=lightGray, bg=darkBlue)
 	cardInfo.pack()
 
 	buttonFrame.pack(side=tk.TOP)
@@ -109,8 +114,6 @@ def PlayTrivia(Qs, As):
 	window.bind('<Right>', NextCard)
 
 	window.mainloop()
-
-
 
 
 orange = '#f99157'
@@ -127,6 +130,7 @@ counter = 0
 # Qs = '../data/questions.txt'
 # As = '../data/answers_spaced.txt'
 
+np.random.seed(12)
 questions, answers = ReadQandA(Qs, As)
 questions, answers, order = ShuffleQandA(questions, answers)
 PrettyPrint(order)
