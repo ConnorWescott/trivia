@@ -1,0 +1,669 @@
+1. 11
+
+2. Six
+
+3. Serena
+
+4. Uruguay
+
+5. 1877
+
+6. Michael Schumacher
+
+7. Usain Bolt
+
+8. Muhammad Ali
+
+9. Track and field
+
+10. Edmonton Oilers
+
+11. 2007
+
+12. ctrl c
+
+13. kilobyte
+
+14. No
+
+15. Charles Babbage
+
+16. HyperText Transfer Protocol
+
+17. Pierre Omidyar
+
+18. Hotmail
+
+19. Web browsers
+
+20. twitter
+
+21. Alexander Fleming
+
+22. Marie Curie
+
+23. Neutron
+
+24. K
+
+25. The weather
+
+26. Venus
+
+27. Earthquakes
+
+28. Oysters
+
+29. Jupiter
+
+30. 3
+
+31. Karl Benz
+
+32. Horse
+
+33. General Motors, Fiat Chrysler Automobiles, and Ford Motor Company
+
+34. Volkswagen
+
+35. Nash Motors
+
+36. Bavarian Motor Works
+
+37. A fighter plane from WWII
+
+38. 30, 000
+
+39. The Pontiac GTO
+
+40. 1953
+
+41. Prunes
+
+42. Venison
+
+43. Maize
+
+44. Chickpeas
+
+45. Brazil
+
+46. China
+
+47. Vodka
+
+48. Paella
+
+49. Germany
+
+50. Italy
+
+51. The heart
+
+52. Leg
+
+53. The skin
+
+54. Neurons
+
+55. Knee cap
+
+56. 10, 000
+
+57. 60-65%
+
+58. Calcium
+
+59. Acquired Immune Deficiency Syndrome
+
+60. More than 100 000
+
+61. Clint Barton
+
+62. Black Widow
+
+63. Can teleport
+
+64. Soul Stone
+
+65. The Wasp
+
+66. Kal-El
+
+67. Alfred
+
+68. Atlantis
+
+69. Sinestro
+
+70. Detective Comics
+
+71. Chile
+
+72. Alaska
+
+73. Canada and the USA
+
+74. Vatican City
+
+75. Asia
+
+76. The Pyramids of Giza
+
+77. Wellington
+
+78. The Sahara Desert (although Antarctica which is larger might qualify as a desert as well)
+
+79. The Nile
+
+80. Agra
+
+81. Thanksgiving Day
+
+82. September
+
+83. July 1st
+
+84. Day of the Dead
+
+85. Beer
+
+86. The Queen’s Official Birthday
+
+87. France
+
+88. India
+
+89. 25th January
+
+90. 9th November
+
+91. N’ SYNC
+
+92. Led Zeppelin
+
+93. Australia
+
+94. Country
+
+95. Boy George
+
+96. P. Diddy
+
+97. Beyonce
+
+98. Ten
+
+99. Spice Girls
+
+100. Despacito
+
+101. Jacqueline Kennedy
+
+102. Ralph Lauren
+
+103. Cotton
+
+104. Coco Chanel
+
+105. Coats
+
+106. Legwarmers
+
+107. Italy
+
+108. 1971
+
+109. Horse
+
+110. Gucci
+
+111. Carl Sandburg
+
+112. Ernest Hemingway
+
+113. Hans Christian Andersen
+
+114. William Shakespeare
+
+115. Arthur Conan Doyle
+
+116. Harry Potter and the Goblet of Fire
+
+117. Suzanne Collins
+
+118. Greece
+
+119. Starbuck
+
+120. Dan Brown
+
+121. Let It Go
+
+122. 7
+
+123. Indiana Jones and the Temple of Doom
+
+124. 3
+
+125. Leonardo DiCaprio
+
+126. Game of Thrones
+
+127. The Camdens
+
+128. Sex and the City
+
+129. Spongebob Squarepants
+
+130. 1997
+
+131. Nicholas Cage
+
+132. Hugh Jackman
+
+133. Nicole Kidman
+
+134. Emily Blunt
+
+135. 15
+
+136. 2009
+
+137. 12
+
+138. 6
+
+139. Kylie Jenner
+
+140. Kanye West
+
+141. Nixon
+
+142. Adams and Bush
+
+143. Three
+
+144. Seven years
+
+145. Queen Elizabeth II
+
+146. Austria
+
+147. Kim Jong Un
+
+148. Leading the Communist Party of China to victory during a Civil War
+
+149. South Africa
+
+150. African National Congress
+
+151. 22 months
+
+152. Canis lupus
+
+153. A Jenny
+
+154. Giraffe
+
+155. The cheetah
+
+156. Five
+
+157. Ladybug
+
+158. An army
+
+159. Three
+
+160. No
+
+161. Affidavit
+
+162. Misdemeanor
+
+163. Decision or judgment
+
+164. Testimony
+
+165. Jury
+
+166. Not guilty
+
+167. 30
+
+168. Harvard
+
+169. Burning the flag
+
+170. Stealing
+
+171. Jeff Bezos
+
+172. Microsoft
+
+173. 2011
+
+174. Google
+
+175. Virgin Atlantic
+
+176. Beetle
+
+177. Rolex
+
+178. Think different
+
+179. Printers
+
+180. 1949
+
+181. Pharaohs
+
+182. Three
+
+183. Cleopatra
+
+184. Gaul
+
+185. About 1000 years
+
+186. Catholicism
+
+187. 1914
+
+188. Austria
+
+189. Dallas
+
+190. The Battle of Waterloo
+
+191. Olympus
+
+192. Achilles
+
+193. Hermes
+
+194. Valhalla
+
+195. Odin
+
+196. A she-wolf
+
+197. Mars
+
+198. Ra
+
+199. Jackal
+
+200. The Nile
+
+201. In Persia
+
+202. 108
+
+203. Clue
+
+204. bishop and rook
+
+205. Monopoly
+
+206. Penguins
+
+207. Pac-Man
+
+208. Ryu
+
+209. Action
+
+210. Football
+
+211. The rat
+
+212. The waterspout
+
+213. Their mittens
+
+214. Three
+
+215. To fetch a pail of water
+
+216. By sleeping during the night
+
+217. The egg won’t crack the concrete floor
+
+218. Four
+
+219. Stairs
+
+220. A towel
+
+221. Seventy-three
+
+222. Two
+
+223. Shiva
+
+224. Madri
+
+225. Lunar
+
+226. Muhammad
+
+227. Priest
+
+228. Mitzvah
+
+229. Nepal
+
+230. Fifth
+
+231. Burj Khalifa
+
+232. 1929
+
+233. Jorn Utzon
+
+234. Boulder Dam
+
+235. Kuala Lumpur
+
+236. Christophe Des Rosiers
+
+237. Twin
+
+238. Patterns
+
+239. Nautical
+
+240. Ottoman
+
+241. Chita Rivera
+
+242. New York City
+
+243. The Phantom of the Opera
+
+244. The Lion King
+
+245. 1750
+
+246. Italian Renaissance
+
+247. The Nutcracker
+
+248. Devant
+
+249. Vaslav Nijinsky
+
+250. Bending at the knees
+
+251. Y
+
+252. Two hundred and six
+
+253. Detroit
+
+254. Octopus
+
+255. Pyro
+
+256. Razor
+
+257. 9
+
+258. Montana
+
+259. “Women and children first”
+
+260. Genetically Modified Organism
+
+261. Ukraine
+
+262. The Beatles
+
+263. 6
+
+264. Butterfly
+
+265. 250
+
+266. Rigobert Song
+
+267. Wasabi
+
+268. An irrational fear of insects.
+
+269. A boomerang that doesn’t come back
+
+270. 1799
+
+271. Michael Collins
+
+272. Cuba
+
+273. Brad Pitt
+
+274. Echo
+
+275. Dr Who.
+
+276. Sonic the Hedgehog
+
+277. Al Jazeera
+
+278. John Milton
+
+279. Belgium
+
+280. Adolf Hitler
+
+281. Sir Walter Raleigh
+
+282. Myanmar (Burma)
+
+283. Canada
+
+284. Zanzibar
+
+285. Holland
+
+286. Arabian Peninsula
+
+287. Sunday
+
+288. Lake Titicaca
+
+289. Antigua
+
+290. Van Allen Belt
+
+291. Nepal
+
+292. Fruit
+
+293. The Artist
+
+294. The sound barrier
+
+295. Julienne
+
+296. The Elephant Man
+
+297. Snake
+
+298. An orange
+
+299. Lotus
+
+300. Florence
+
+301. Isaac Asimov
+
+302. The Winter Palace
+
+303. Tom Waits
+
+304. Field of Dreams
+
+305. Lettuce
+
+306. Mata Hari
+
+307. Knives
+
+308. 2001 A Space Odyssey
+
+309. Robert
+
+310. Wikipedia
+
+311. Edgar Degas
+
+312. Gary Oldman
+
+313. Basmati
+
+314. DeLorean
+
+315. Levi Strauss
+
+316. Stockholm
+
+317. Jon Bon Jovi
+
+318. Energy
+
+319. Dreamworks
+
+320. T. E. Lawrence or ‘Lawrence of Arabia’
+
+321. Bill Russell (11)
+
+322. Rainn Wilson
+
+323. Colorado
+
+324. The bubble
+
+325. Derivative
+
+326. The south pole
+
+327. Osmosis
+
+328. Newton and Leibniz 
+
+329. 1876 
+
+330. The Epoch
+
+331. Dave Portnoy, Barstool Sports
+
+332. Asshole, Kanye West – Father Stretch My Hands Pt 1 – The Life of Pablo
+
+333. B cells
+
+334. Diffusion
+
+335. A-T , C-G, Purines, Pyrimidines. 

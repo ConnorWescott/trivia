@@ -121,14 +121,14 @@ darkBlue = '#1b2b34'
 lightGray = '#cdd3de'
 
 
-Qs = '../data/questions_short.txt'
-As = '../data/answers_short.txt'
+Qs = '../data/questionsTest.txt'
+As = '../data/answersTest.txt'
 
 global counter
 counter = 0
 
-# Qs = '../data/questions.txt'
-# As = '../data/answers_spaced.txt'
+Qs = '../data/Questions2.txt'
+As = '../data/Answers2.txt'
 
 np.random.seed(12)
 questions, answers = ReadQandA(Qs, As)
