@@ -1,5 +1,0 @@
-1. What is my name?
-
-2. Where is She?
-
-3. Does this questions with a very very long body fully test the text wrapping capabilities of tkinter with my given font size and computer screen size and code?
