@@ -1,5 +1,15 @@
-import tkinter as tk
+# -*- coding: utf-8 -*-
+
 import numpy as np
+import sys
+import os
+
+if sys.version_info < (3, 0):
+	# Python 2
+	import Tkinter as tk
+else:
+	# Python 3
+	import tkinter as tk
 
 
 def ReadQandA(questionFile, answerFile):
@@ -27,8 +37,18 @@ def ShuffleQandA(questions, answers):
 def PrettyPrint(order):
 	order += 1
 	number = list(range(1, len(order) + 1))
+	print('Order of appearance:\tPrinted Question Number')
 	for o, n in zip(order, number):
-		print(str(n) + ':\t' + str(o))
+		print('{}:\t{}'.format(n, o))
+	return
+
+
+def PrettySave(order, fileHandle):
+	# order += 1
+	number = list(range(1, len(order) + 1))
+	for o, n in zip(order, number):
+		line = '{}:\t{}\n'.format(n, o)
+		fileHandle.write(line)
 	return
 
 
@@ -64,7 +84,6 @@ def PlayTrivia(Qs, As):
 			end_btn = tk.Button(master=buttonFrame, text='Click here to exit ', font=("Helvetica Neue Bold", 35), highlightbackground=darkBlue, fg=darkBlue, command=window.destroy)
 			end_btn.pack()
 
-
 	def countdown(seconds, timer):
 		timer.config(text=str(seconds))
 		if seconds < 1:
@@ -83,6 +102,7 @@ def PlayTrivia(Qs, As):
 			window.after(1000, countdown, seconds - 1, timer)
 
 	window = tk.Tk()
+	window.title("Trivia!")
 	window.geometry('1200x700')
 	window.configure(bg=darkBlue)
 
@@ -127,8 +147,8 @@ As = '../data/answersTest.txt'
 global counter
 counter = 0
 
-Qs = '../data/Questions2.txt'
-As = '../data/Answers2.txt'
+Qs = '/Users/matt/Google Drive/trivia/data/Questions2.txt'
+As = '/Users/matt/Google Drive/trivia/data/Answers2.txt'
 
 np.random.seed(12)
 questions, answers = ReadQandA(Qs, As)
@@ -137,3 +157,8 @@ PrettyPrint(order)
 
 
 PlayTrivia(questions, answers)
+savePath = os.path.join(os.path.expanduser('~'), 'Desktop', 'triviaProgress.txt')
+
+with open(savePath, 'w') as file:
+	file.write('You played {} questions. Next time, skip {} questions and start at the card with question number {}.\n'.format(counter, counter, order[counter]))
+	PrettySave(order[:counter], file)
