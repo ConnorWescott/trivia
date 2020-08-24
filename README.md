@@ -1,31 +1,33 @@
 # Python Trivia Game
-Python GUI for playing trivia when questions and answers are in seperate .txt files
+Python GUI for playing trivia wrapped into a Mac application. (Sorry, MacOS only )
 
 ---
 
 ## How To Play 
-To run this Python trivia game, you will need the code and data files included in this repository and a python3 enviroment with `tkinter` and `numpy`. Navigate to your local directory that contains the `trivia.py` file.
+To play, simply open the trivia app like you would open any other app. [[Write about Apple's warning for unverified developers. Add pics too]]
 
 ---
 
 ### TODO:
 
 #### Visual
-	- Nothing for now :) 
+- Nothing for now :) 
 
 #### Functional
-	- Set a common seed for everyone and let users jump to a specific question number when they start the game
-	- Make a MacOS application that automatically starts the game (if it can find the python3 environment)
+	
+- Make a MacOS application that can be played without depending on the user's python environment
+- Allow the user to input a question number to start on
 
 ---
 
 ### DONE:
-	- Change backgrond color (dark mode)
-	- Make each window pop up in the same place
-	- Allow keyboard keys to flip card and move to next card
-	- Make buttons (and button text larger)
-	- Countdown timer
-	- Have current slide's timer stop when next card is queued before current card's timer is up
+- Set a common seed for everyone and let users jump to a specific question number when they start the game
+- Change backgrond color (dark mode)
+- Make each window pop up in the same place
+- Allow keyboard keys to flip card and move to next card
+- Make buttons (and button text larger)
+- Countdown timer
+- Have current slide's timer stop when next card is queued before current card's timer is up
 
 --- 
 ## Credit
