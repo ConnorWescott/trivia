@@ -18,6 +18,8 @@ To play, simply open the trivia app like you would open any other app. [[Write a
 - Make a MacOS application that can be played without depending on the user's python environment
 - Allow the user to input a question number to start on
 
+	- Turn "PlayTrivia" function into a class. The internal functions will become methods. Counter, seconds, questionOrder, ... will become a class attribute
+
 ---
 
 ### DONE:

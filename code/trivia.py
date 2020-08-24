@@ -5,9 +5,11 @@ import sys
 import os
 
 if sys.version_info < (3, 0):
+	print('Python 2 :(')
 	# Python 2
 	import Tkinter as tk
 else:
+	print('Python 3 :)')
 	# Python 3
 	import tkinter as tk
 
@@ -74,7 +76,7 @@ def PlayTrivia(Qs, As):
 			timer = tk.Label(master=buttonFrame, text='30', font=("Helvetica Neue Bold", 50), fg=lightGray, bg=darkBlue)
 			timer.pack(side=tk.LEFT)
 			countdown(30, timer)
-		except IndexError:
+		except IndexError: # It's not always an IndexError that is the exception 
 			timer.destroy()
 
 			cardInfo.config(text='No more cards. Thank you for playing! 🤠')
@@ -136,6 +138,25 @@ def PlayTrivia(Qs, As):
 	window.mainloop()
 
 
+def GetStartNumber():
+	window = tk.Tk()
+	window.title("Trivia!")
+	window.geometry('1200x700')
+	window.configure(bg=darkBlue)
+	
+	tk.Label(window, text="Question to start on:", font=("Helvetica Neue", 80), fg=lightGray, bg=darkBlue).grid(row=0)
+	e1 = tk.Entry(window, font=("Helvetica Neue", 80), fg=darkBlue)
+	tk.Button(window, text='Enter', command=window.quit, font=("Helvetica Neue", 80), fg=darkBlue).grid(row=3, column=0, sticky=tk.W, pady=4)
+	e1.grid(row=0, column=1)
+	window.mainloop()
+	number = e1.get()
+	window.destroy()
+	if number.isdigit():
+		return int(number)
+	else:
+		return 0
+
+
 orange = '#f99157'
 darkBlue = '#1b2b34'
 lightGray = '#cdd3de'
@@ -147,14 +168,18 @@ As = '../data/answersTest.txt'
 global counter
 counter = 0
 
-Qs = '/Users/matt/Google Drive/trivia/data/Questions2.txt'
-As = '/Users/matt/Google Drive/trivia/data/Answers2.txt'
+# Qs = '/Users/matt/Google Drive/trivia/data/Questions2.txt'
+# As = '/Users/matt/Google Drive/trivia/data/Answers2.txt'
 
 np.random.seed(12)
 questions, answers = ReadQandA(Qs, As)
 questions, answers, order = ShuffleQandA(questions, answers)
 PrettyPrint(order)
 
+startNumber = GetStartNumber()
+if startNumber >= len(questions):
+	startNumber = 0
+counter = startNumber
 
 PlayTrivia(questions, answers)
 savePath = os.path.join(os.path.expanduser('~'), 'Desktop', 'triviaProgress.txt')
